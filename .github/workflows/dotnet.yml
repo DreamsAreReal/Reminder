@@ -20,6 +20,6 @@ jobs:
 
     - name: Build and run reminder
       run: |
-        dotnet build -c Release
+        cd src && dotnet build -c Release
         dotnet src/Reminder/bin/Release/net8.0/Reminder.dll
 
