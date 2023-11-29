@@ -1,4 +1,4 @@
-# Overview
+# 🌐 Overview
 
 An application for sending telegram messages via cron with launch in Github Actions.
 
