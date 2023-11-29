@@ -1,9 +1,9 @@
 # 🌐 Overview
 
-An application for sending telegram messages via cron with launch in Github Actions.
+An application designed to send Telegram messages via cron, leveraging GitHub Actions for scheduled execution.
 
 ## 📝 Appsettings Configuration Guide
-The `src\Reminder\appsettings.json` file is the configuration hub for the Reminder application, providing essential information for proper execution. Let's break down the fields and understand their roles:
+The src\Reminder\appsettings.json file is the configuration hub for the Reminder application, providing essential information for proper execution. Let's break down the fields and understand their roles:
 ### 📱 TelegramBotConfig
 This section contains configuration details for the Telegram bot used to send notifications.
 - Token: Replace `YOUR_TELEGRAM_TOKEN` with the actual token of your Telegram bot.
@@ -21,9 +21,9 @@ Each reminder in the "Reminders" array has the following properties:
    - `OncePerMonth`: Monthly repeating reminder (compares the day).
    - `OnceTime`: One-time reminder (compares day, month and year).
 # 🚀 Run Reminder GitHub Actions Workflow
-Create a private repository.
-Move the files for this project to your repository.
-Update the file located along the path `.github\workflows\` with the name `dotnet.yml`
+1. Create a private repository.
+2. Move the files for this project to your repository.
+3. Update the file located along the path `.github\workflows\` with the name `dotnet.yml`
 
 ```yaml
 on:
