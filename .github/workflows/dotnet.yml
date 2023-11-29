@@ -22,5 +22,6 @@ jobs:
       run: |
         cd src
         dotnet build -c Release
+        cp Reminder/appsettings.json Reminder/bin/Release/net8.0/
         dotnet Reminder/bin/Release/net8.0/Reminder.dll
 
