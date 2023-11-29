@@ -8,6 +8,7 @@ using Reminder.Infrastructure.Implementation.Telegram;
 using Reminder.Infrastructure.Implementation.Telegram.Configuration;
 
 Stopwatch timer = Stopwatch.StartNew();
+
 IConfiguration configuration = new ConfigurationBuilder().SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                                                          .AddJsonFile("appsettings.json", true, true)
                                                          .AddUserSecrets<Program>()
@@ -24,7 +25,10 @@ ServiceProvider serviceProvider = new ServiceCollection()
 INotifier? notifier = serviceProvider.GetService<INotifier>();
 CancellationTokenSource cancellationTokenSource = new();
 ReminderConfig? reminderConfig = serviceProvider.GetService<IOptions<ReminderConfig>>()!.Value;
-DateTime currentTime = TimeZoneInfo.ConvertTime(DateTime.Now, reminderConfig?.GetTimeZone() ?? TimeZoneInfo.Utc);
+
+DateTime currentTime = TimeZoneInfo.ConvertTime(
+    DateTime.Now, reminderConfig?.GetTimeZone() ?? TimeZoneInfo.Utc
+);
 
 foreach (Reminder.Domain.Entities.Reminder reminder in reminderConfig?.Reminders ??
                                                        new List<Reminder.Domain.Entities.Reminder>())

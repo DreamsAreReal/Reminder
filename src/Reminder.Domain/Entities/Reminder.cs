@@ -10,7 +10,7 @@ public record Reminder(string Text, DateTime ReminderIn, ReminderType ReminderTy
                {
                    ReminderType.OnceTime => currentTime.Date == ReminderIn.Date,
                    ReminderType.OncePerYear => currentTime.Day == ReminderIn.Day &&
-                                           currentTime.Month == ReminderIn.Month,
+                                               currentTime.Month == ReminderIn.Month,
                    ReminderType.OncePerMonth => currentTime.Day == ReminderIn.Day,
                    _ => false,
                };

@@ -9,7 +9,6 @@ public class TelegramNotifier(IOptions<TelegramBotConfig> telegramConfig) : INot
 {
     private readonly ITelegramBotClient
         _telegramBotClient = new TelegramBotClient(telegramConfig.Value.Token);
-    
 
     public async Task NotifyAsync(Domain.Entities.Reminder reminder, CancellationToken token)
     {
