@@ -3,7 +3,7 @@
 An application designed to send Telegram messages via cron, leveraging GitHub Actions for scheduled execution.
 
 ## 📝 Appsettings Configuration Guide
-The src\Reminder\appsettings.json file is the configuration hub for the Reminder application, providing essential information for proper execution. Let's break down the fields and understand their roles:
+The `src\Reminder\appsettings.json` file is the configuration hub for the Reminder application, providing essential information for proper execution. Let's break down the fields and understand their roles:
 ### 📱 TelegramBotConfig
 This section contains configuration details for the Telegram bot used to send notifications.
 - Token: Replace `YOUR_TELEGRAM_TOKEN` with the actual token of your Telegram bot.
